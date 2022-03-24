@@ -1,0 +1,27 @@
+<form #heroForm="ngForm">
+  <div>
+    <label for="username">User name</label>
+    <input type="text"  id="username"
+           required
+           [(ngModel)]="model.username" name="username"
+           #nm="ngModel">
+    <div [hidden]="nm.valid || nm.pristine" style="color: red">
+      Name is required
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password"
+           required
+           [(ngModel)]="model.password" name="password"
+           #mail="ngModel">
+    <div [hidden]="mail.valid || mail.pristine" style="color: red">
+      Email is required
+    </div>
+  </div>
+
+  <button type="submit"[disabled]="!heroForm.form.valid"
+          (click)=" onSubmit(model)">Sign In
+  </button>
+</form>

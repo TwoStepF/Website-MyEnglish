@@ -1,0 +1,33 @@
+<div [hidden]="!bl">
+  <button (click)="ngChange()">Tiếng anh -> Tiếng việt</button>
+  <div>
+    <label for="english">Tiếng anh</label>
+    <input type="text" id="english" [(ngModel)]="Infor.englishmean" name="englishmean">
+  </div>
+  <div>
+    <label>Tiếng Việt: </label>
+    <div *ngFor="let result of Result">
+      <p>{{result.vietnamesemean}}</p>
+      <p>{{result.type}}</p>
+    </div>
+  </div>
+  <button (click)="ngSubmit()">Submit</button>
+</div>
+
+
+<div [hidden]="bl">
+  <button (click)="ngChange()">Tiếng việt -> Tiếng anh</button>
+  <div>
+    <label for="english">Tiếng Việt</label>
+    <input type="text" id="english" [(ngModel)]="Infor.vietnamesemean" name="englishmean">
+  </div>
+  <div>
+    <label>Tiếng anh: </label>
+    <div *ngFor="let result of Result2">
+      <p>{{result.englishmean}}</p>
+      <p>{{result.type}}</p>
+    </div>
+  </div>
+  <button (click)="ngSubmitV()">Submit</button>
+</div>
+

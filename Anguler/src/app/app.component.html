@@ -1,0 +1,24 @@
+<div>
+  <div style="position: fixed; top: 0; left: 0; bottom: 0; width: 22%;">
+    <div style="margin: 60px 0  0 0;">
+      <h1 style="font-family: 'Roboto'; margin-left: 28%">My English</h1>
+      <div class="p-d-flex" style="margin:-8px 0 0 43%;">
+        <a href="https://www.facebook.com/profile.php?id=100010411335621" class="p-mr-2 pi pi-facebook" style="text-decoration:none; color: black; font-size: 25px;"></a>
+        <a href="https://github.com/TwoStepF" class="p-mr-2 pi pi-github" style="text-decoration:none; color: black; font-size: 25px"></a>
+      </div>
+      <div class="p-d-flex p-flex-column" style="margin: 30px 0 0 20px">
+        <button pButton pRipple routerLink="" type="button" label="Trang chủ" class="p-button-secondary p-button-text p-mb-2" style="color: black;" ></button>
+        <button pButton pRipple type="button" label="Tra từ vựng" class="p-button-secondary p-button-text p-mb-2" routerLink="vocabulary/find"></button>
+        <button pButton pRipple type="button" label="Thêm từ vựng" class="p-button-secondary p-button-text p-mb-2" routerLink="vocabulary/add" ></button>
+        <button pButton pRipple type="button" label="Từ vựng của bạn" class="p-button-secondary p-button-text p-mb-2"routerLink="vocabulary" ></button>
+        <button pButton pRipple type="button" label="Đăng nhập" class="p-button-secondary p-button-text p-mb-2" routerLink="auth/login"></button>
+        <button pButton pRipple type="button" label="Đăng ký" class="p-button-secondary p-button-text p-mb-2" routerLink="auth/register" ></button>
+        <button pButton pRipple type="button" label="Đăng xuất" class="p-button-secondary p-button-text p-mb-2" (click)="logout()"></button>
+      </div>
+    </div>
+  </div>
+  <div style="margin-left: 30%">
+      <router-outlet>
+      </router-outlet>
+  </div>
+</div>

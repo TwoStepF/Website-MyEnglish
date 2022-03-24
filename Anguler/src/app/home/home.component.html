@@ -1,0 +1,8 @@
+<h3>Welcome</h3>
+<div *ngFor="let m of messages">
+    <p>{{m.username}}: {{m.message}}</p>
+</div>
+<div>
+  <input type="text" [(ngModel)]="SendMess.message" name="vietnamesemean">
+</div>
+<button (click)="ngSubmit()">Submit</button>

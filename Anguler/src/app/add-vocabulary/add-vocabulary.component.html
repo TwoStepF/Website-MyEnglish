@@ -1,0 +1,21 @@
+<form>
+  <div>
+    <label for="english">Tiếng anh</label>
+    <input type="text" id="english" [(ngModel)]="Infor.englishmean" name="englishmean">
+  </div>
+  <div>
+    <label>Loại:</label>
+    <div>
+        <p-radioButton name="groupname" value="Danh từ" [(ngModel)]="Infor.type"></p-radioButton><label>Danh từ</label>
+        <p-radioButton name="groupname" value="Tính từ" [(ngModel)]="Infor.type"></p-radioButton><label>Tính từ</label>
+        <p-radioButton name="groupname" value="Trạng từ" [(ngModel)]="Infor.type"></p-radioButton><label>Trạng từ</label>
+        <p-radioButton name="groupname" value="Động từ" [(ngModel)]="Infor.type"></p-radioButton><label>Động từ</label>
+    </div>
+  </div>
+  <div>
+    <label for="Vietnam">Tiếng việt</label>
+    <input type="text" id="Vietnam" [(ngModel)]="Infor.vietnamesemean" name="vietnamesemean">
+  </div>
+  <button (click)="ngSubmit()">Submit</button>
+</form>
+

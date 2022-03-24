@@ -1,0 +1,54 @@
+<h1>Sign in</h1>
+<form #heroForm="ngForm">
+  <div>
+    <label for="username">User name</label>
+    <input type="text"  id="username"
+           required
+           [(ngModel)]="model.username" name="username"
+           #nm="ngModel">
+    <div [hidden]="nm.valid || nm.pristine" style="color: red">
+      Name is required
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email"  id="email"
+           required
+           [(ngModel)]="model.email" name="email"
+           #email="ngModel">
+    <div [hidden]="email.valid || email.pristine" style="color: red">
+      Password is required
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password"
+           required
+           [(ngModel)]="model.password" name="password"
+           #mail="ngModel">
+    <div [hidden]="mail.valid || mail.pristine" style="color: red">
+      Password is required
+    </div>
+  </div>
+
+  <div>
+    <label for="ConfirmPassword">Confirm password</label>
+    <input type="password" id="ConfirmPassword"
+           required
+           [(ngModel)]="model.confirmpassword" name="ConfirmPassword"
+           #pass="ngModel">
+    <div [hidden]="pass.valid || pass.pristine" style="color: red">
+      Password is required
+    </div>
+    <div [hidden]="pass.value == mail.value" style="color: red">
+      Xác nhận mật khẩu không chính xác
+    </div>
+  </div>
+
+  <button type="submit"[disabled]="!heroForm.form.valid || (pass.value != mail.value)"
+          (click)=" onSubmit(heroForm.value)">Sign In
+  </button>
+
+</form>
